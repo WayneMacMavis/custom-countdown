@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 html {
   box-sizing: border-box;
@@ -10,7 +10,7 @@ body {
   overflow-y: hidden;
   display: flex;
   align-items: center;
-
+  font-family: 'Architects Daughter', cursive;
 }
 
 /* Video Background */
@@ -18,8 +18,8 @@ body {
   position: fixed;
   right: 0;
   bottom: 0;
-width: 100vw;
-height: auto;
+  width: 100vw;
+  height: auto;
 }
 
 video {
@@ -82,7 +82,7 @@ input {
   border-radius: 20px;
   background: #fff;
   outline: none;
-
+  font-family: 'Architects Daughter', cursive;
 }
 
 /* Button */
@@ -99,7 +99,9 @@ button {
   outline: none;
 }
 
-
+button:hover {
+  filter: brightness(110%);
+}
 
 /* Countdown */
 ul {
@@ -107,7 +109,7 @@ ul {
 }
 
 li {
-
+  display: inline-block;
   font-size: 30px;
   list-style-type: none;
   padding: 10px;
@@ -126,9 +128,35 @@ li span {
   top: 60px;
 }
 
+.complete-title {
+  animation: complete 4s infinite;
+}
+
+@keyframes complete {
+  0% {
+    color: rgb(212, 0, 0);
+  }
+
+  25% {
+    color: rgb(231, 210, 24);
+  }
+
+  50% {
+    color: rgb(48, 218, 26);
+    transform: scale(1.5);
+  }
+
+  75% {
+    color: rgb(20, 218, 218);
+  }
+
+  100% {
+    color: rgb(16, 19, 206);
+  }
+}
 
 /* Media Query: Large Smartphone (Vertical) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   .video-background {
     height: 100vh;
     width: 100vw;
